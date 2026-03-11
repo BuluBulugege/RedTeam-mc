@@ -1,0 +1,11 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+
+[[mods]]
+modId="redteam"
+version="${file.jarVersion}"
+displayName="Red Team - Attack Framework"
+description='''
+Modular attack framework for security exercise.
+'''
