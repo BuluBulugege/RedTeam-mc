@@ -1,4 +1,4 @@
-**中文** | [English](#english)
+**中文** | [English](#english-version)
 
 <div align="center">
 <img src="safe-protect/red/public/logo-text.png" width="400" />
@@ -116,7 +116,8 @@ cd safe-protect/red
 
 ---
 
-## English
+<details>
+<summary id="english-version">🌐 English Version</summary>
 
 [中文](#) | **English**
 
@@ -177,6 +178,29 @@ Phase 3 — Stealth System
 3. `HandshakeHider` cleans `NetworkRegistry.instances` and `NetworkRegistry.channels`
 4. Remote modules load via `InMemoryClassLoader` — no JAR on disk, no file traces
 
+### 🎯 Exploit Modules
+
+| Category | Modules | Vulnerability Types |
+|---|---|---|
+| LR Tactical | LRT01–LRT04 | KillAura, DoS, death exploit |
+| TACZ Firearms | TACZ01–TACZ02 | Attachment dupe, rapid fire |
+| TACZ Addon | TACZADD01–03 | Slot swap, remote container, crash |
+| Citadel | CTD01–CTD03 | Tag override, NBT bloat DoS, spoof |
+| Alex's Mobs | AM01–AM07 | Item inject, teleport, hijack, biome corrupt |
+| Corpse | CORPSE01–03 | Death history spy, page crash, I/O flood |
+| KubeJS | KJS01–KJS03 | Data inject, click flood, NBT bloat |
+| JourneyMap | JM01–JM05 | Teleport, admin config R/W, DoS |
+| Open Parties & Claims | OPAC01–05 | Claim DoS, sync flood, memory pressure |
+| CustomNPCs | CNPC01–07 | NBT overwrite, dialog forge, player data wipe |
+| Curios API | CURIOS01–02 | Destroy all items, render toggle |
+| ParCool! | PCOOL01–03 | Infinite stamina, action spoof, DoS |
+| Limitless Vehicle | LV01–LV06 | Hijack, artillery abuse, remote craft |
+| Immersive Aircraft | IA01–IA06 | Velocity inject, inventory spy, NaN crash |
+| Cataclysm | CATA01–02 | Altar inject, race condition DoS |
+| FTB Quests | FTQ01–06 | Item dupe, quest vandal, structure leak |
+| ExtinctionZ | EXT01–04 | Remote container, backpack NBT inject, bypass |
+| Simple Voice Chat | VC01–03 | Group brute force, flood DoS, audio amplify |
+
 ### 🚀 Quick Start
 
 ```bash
@@ -192,3 +216,18 @@ Install into Minecraft 1.20.1 + Forge 47.2.0 client `mods/` folder.
 - `Shift+1` through `Shift+0` — trigger bound hotkey slots
 - `/rc load <token>` — load remote exploit modules
 - `/rc unload` — unload remote modules
+
+### 🛠 Tech Stack
+
+| Component | Technology |
+|---|---|
+| Minecraft | 1.20.1 |
+| Mod Loader | Forge 47.2.0 |
+| Language | Java 17 |
+| Build | Gradle + ForgeGradle |
+| Mappings | Official (Mojang) |
+| Packet Layer | Netty + Forge SimpleChannel |
+| Class Loading | Custom InMemoryClassLoader |
+| Remote Loading | Java ServiceLoader + Bearer auth |
+
+</details>
